@@ -1,21 +1,29 @@
-﻿namespace la_mia_pizzeria_static
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+[Table("Pizze")]
+public class Pizza
 {
-    public class Pizza
+    [Key]
+    public int id { get; set; }
+
+    public string name { get; set; }
+
+    [Column(TypeName = "text")]
+    public string description { get; set; }
+
+    public string fotoLink { get; set; }
+
+    [Column(TypeName = "decimal(6, 2)")]
+    public decimal prezzo { get; set; }
+
+    public Pizza(string name, string description, string fotoLink, decimal prezzo)
     {
-        public string name = "";
-        public string description = "";
-        public string fotoLink = "";
-        public decimal prezzo;
-        public int id;
-
-        public Pizza(string name, string description, string fotoLink, decimal prezzo, int id)
-        {
-            this.name = name;
-            this.description = description;
-            this.fotoLink = fotoLink;
-            this.prezzo = prezzo;
-            this.id = id;
-        }
-
+        this.name = name;
+        this.description = description;
+        this.fotoLink = fotoLink;
+        this.prezzo = prezzo;
     }
+
 }
+

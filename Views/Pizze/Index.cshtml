@@ -1,12 +1,12 @@
 ﻿@{
 
-    Pizza margherita = new Pizza("Margherita", "Pizza classica con pomodoro, mozzarella e basilico", "https://www.finedininglovers.it/sites/g/files/xknfdk1106/files/styles/recipes_1200_800_fallback/public/fdl_content_import_it/margherita-50kalo.jpg?itok=v9nHxNMS", (decimal)6.50, 1);
-    Pizza boscaiola = new Pizza("Boscaiola", "Pizza a base bianca con funghi champignon e salsiccia", "https://3punto0express.com/wp-content/uploads/2020/03/boscaiola.jpg", (decimal)7.50, 2);
-    Pizza crostino = new Pizza("Crostino", "Pizza particolare, con prosciutto cotto ed una strato di mozzarella cotta sopra a formare una copertura di crosta", "https://www.alfaforni.com/wp-content/uploads/2020/05/pizza-crostino-cotto-e-mozzarella-alfa-forni.jpg", (decimal)7.00, 3);
-    Pizza diavola = new Pizza("Diavola", "Pizza con base pomodoro, mozzarella a cubetti, salame piccante e guarnizione con olio e origano, perfetta per chi ama il piccante con moderazione", "https://www.dottorpeperoncino.com/img_news/big/54.jpg", (decimal)8.50, 4);
-    Pizza quattroFor = new Pizza("Quattro formaggi", "Pizza con mozzarella, gorgonzola, fontina, parmiggiano reggiano e pepe", "https://www.unmondodisapori.it/wp-content/uploads/2017/10/4formaggi.jpg", (decimal)8.00, 5);
-    Pizza capricciosa = new Pizza("Capricciosa", "Pizza con pomodoro, mozzarella, prosciutto, olive,funghi,capperi e carciofini", "https://cdn.ilclubdellericette.it/wp-content/uploads/2020/07/pizza-capricciosa-1280x720.jpg", (decimal)9.00, 6);
-    Pizza bismarck = new Pizza("Alla Bismarck", "Pizza con pomodoro, mozzarella, asparagi e uovo", "https://static.cookist.it/wp-content/uploads/sites/21/2021/05/Pizza-alla-Bismarck.jpg", (decimal)8.50, 7);
+    Pizza margherita = new Pizza("Margherita", "Pizza classica con pomodoro, mozzarella e basilico", "https://www.finedininglovers.it/sites/g/files/xknfdk1106/files/styles/recipes_1200_800_fallback/public/fdl_content_import_it/margherita-50kalo.jpg?itok=v9nHxNMS", (decimal)6.50);
+    Pizza boscaiola = new Pizza("Boscaiola", "Pizza a base bianca con funghi champignon e salsiccia", "https://3punto0express.com/wp-content/uploads/2020/03/boscaiola.jpg", (decimal)7.50);
+    Pizza crostino = new Pizza("Crostino", "Pizza particolare, con prosciutto cotto ed una strato di mozzarella cotta sopra a formare una copertura di crosta", "https://www.alfaforni.com/wp-content/uploads/2020/05/pizza-crostino-cotto-e-mozzarella-alfa-forni.jpg", (decimal)7.00);
+    Pizza diavola = new Pizza("Diavola", "Pizza con base pomodoro, mozzarella a cubetti, salame piccante e guarnizione con olio e origano, perfetta per chi ama il piccante con moderazione", "https://www.dottorpeperoncino.com/img_news/big/54.jpg", (decimal)8.50);
+    Pizza quattroFor = new Pizza("Quattro formaggi", "Pizza con mozzarella, gorgonzola, fontina, parmiggiano reggiano e pepe", "https://www.unmondodisapori.it/wp-content/uploads/2017/10/4formaggi.jpg", (decimal)8.00);
+    Pizza capricciosa = new Pizza("Capricciosa", "Pizza con pomodoro, mozzarella, prosciutto, olive,funghi,capperi e carciofini", "https://cdn.ilclubdellericette.it/wp-content/uploads/2020/07/pizza-capricciosa-1280x720.jpg", (decimal)9.00);
+    Pizza bismarck = new Pizza("Alla Bismarck", "Pizza con pomodoro, mozzarella, asparagi e uovo", "https://static.cookist.it/wp-content/uploads/sites/21/2021/05/Pizza-alla-Bismarck.jpg", (decimal)8.50);
 
     List<Pizza> listaPizze = new List<Pizza>();
     listaPizze.Add(margherita);
@@ -43,7 +43,7 @@
                     <h2>@pizza.name</h2>
                     <p>@pizza.description</p>
                     <p><strong>Prezzo: </strong>@pizza.prezzo</p>
-                    <p><a href="/Pizze/Details/@pizza.id">Dettagli</a><p>
+                    @*<p><a href="/Pizze/Details/@pizza.id">Dettagli</a><p>*@
                 </div>
             }
         </div>
