@@ -8,7 +8,9 @@ namespace la_mia_pizzeria_static.Controllers
         // GET: HomeController1
         public ActionResult Index()
         {
-            return View();
+            PizzaContext context = new PizzaContext();
+            List<Pizza> listaPizze = context.Pizza.ToList();
+            return View("Index", listaPizze);
         }
 
         // GET: HomeController1/Details/5
