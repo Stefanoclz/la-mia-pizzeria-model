@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
+using Microsoft.Data.SqlClient;
+
 
 namespace la_mia_pizzeria_static.Controllers
 {
@@ -16,6 +19,8 @@ namespace la_mia_pizzeria_static.Controllers
         // GET: HomeController1/Details/5
         public ActionResult Details(int id)
         {
+            
+
             using (PizzaContext context = new PizzaContext())
             {
                 Pizza singola = context.Pizza.Where(singola => singola.id == id).FirstOrDefault();
@@ -26,6 +31,7 @@ namespace la_mia_pizzeria_static.Controllers
                 }
                 else
                 {
+                    context.Entry(singola).Collection("listaIngredienti").Load();
                     return View("Details", singola);
                 }
             }

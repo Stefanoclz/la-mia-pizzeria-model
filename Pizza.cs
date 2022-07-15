@@ -17,6 +17,8 @@ public class Pizza
     [Column(TypeName = "decimal(6, 2)")]
     public decimal prezzo { get; set; }
 
+    public List<Ingrediente> listaIngredienti { get; set; }
+
     public Pizza(string name, string description, string fotoLink, decimal prezzo)
     {
         this.name = name;
