@@ -49,3 +49,8 @@ body {
 .foto img {
     width: 400px;
 }
+
+.img-pizza {
+    width: 100%;
+    object-fit: contain;
+}

@@ -16,7 +16,20 @@ namespace la_mia_pizzeria_static.Controllers
         // GET: HomeController1/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            using (PizzaContext context = new PizzaContext())
+            {
+                Pizza singola = context.Pizza.Where(singola => singola.id == id).FirstOrDefault();
+                if(singola == null)
+                {
+                    return NotFound($"La pizza con id {id} non è stata trovata");
+
+                }
+                else
+                {
+                    return View("Details", singola);
+                }
+            }
+                    
         }
 
         // GET: HomeController1/Create
